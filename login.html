@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>ログイン</title>
+
+<!-- CSS ---------->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="res/lib/hifive/h5.css" rel="stylesheet">
+<link href="res/lib/jquery-ui.custom/jquery-ui.css" rel="stylesheet">
+<link href="res/lib/jquery.confirm/jquery.confirm.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+
+<!-- JS ---------->
+<!--[if lt IE 9]>
+<script src="/hifive-res/ext/jquery/jquery-1.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="res/lib/jquery/jquery-2.1.1.js"></script>
+<!--<![endif]-->
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="res/lib/hifive/ejs-h5mod.js"></script>
+<script src="res/lib/hifive/h5.dev.js"></script>
+<script src="res/lib/jquery-ui.custom/jquery-ui.min.js"></script>
+<script src="res/lib/jquery.confirm/jquery.confirm.js"></script>
+
+<!--
+<script src="res/lib/hifive-1.2.3/h5.dev.js"></script>
+ -->
+<!-- hifiveの直後に開発者ツールのファイルを読み込む -->
+<!--
+<script src="res/lib/hifive-1.2.3/h5-dev-tool.js"></script>
+-->
+<!-- grid必要ライブラリ -->
+<script src="js/login.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="content-area">
+	        <div class="card card-container">
+	            <img id="profile-img" class="profile-img-card" src="./images/avatar_2x.png" />
+	            <p id="profile-name" class="profile-name-card"></p>
+	            <form class="form-signin">
+	                <input type="text" id="inputUserid" class="form-control" placeholder="Login Name" required autofocus>
+	                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+	                <button class="btn btn-lg btn-primary btn-block btn-signin" id="loginButton">ログイン</button>
+	            </form><!-- /form -->
+	        </div><!-- /card-container -->
+ 			<form class="form-horizontal" role="form">
+ 				<div class="well well-sm">
+	 				<div id="dialog-pass-form" title="パスワード変更" style="display: none;">
+						<div class="form-group">
+							<div class="row">
+								<label for="inputUserid1" class="col-sm-6 control-label h5" >ログイン名</label>
+								<div class="col-sm-6" style="padding: 3px;">
+									<input type="text" id="inputUserid1" class="form-control" readonly>
+								</div>
+							</div>
+							<div class="row">
+								<label for="nowPassword" class="col-sm-6 control-label h5" >現在のパスワード</label>
+								<div class="col-sm-6" style="padding: 3px;">
+									<input type="password" id="nowPassword" class="form-control" placeholder="Password" required autofocus>
+								</div>
+							</div>
+							<div class="row">
+								<label for="newPassword1" class="col-sm-6 control-label h5" >新パスワード</label>
+								<div class="col-sm-6" style="padding: 3px;">
+									<input type="password" id="newPassword1" class="form-control" placeholder="Password" required>
+								</div>
+							</div>
+							<div class="row">
+								<label for="newPassword2" class="col-sm-6 control-label h5" >新パスワード(確認)</label>
+								<div class="col-sm-6" style="padding: 3px;">
+									<input type="password" id="newPassword2" class="form-control" placeholder="Password" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+        </div>
+    </div><!-- /container -->
+</body>
+</html>
